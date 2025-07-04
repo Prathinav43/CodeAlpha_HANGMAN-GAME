@@ -12,7 +12,7 @@ WORDS = ["python", "blender", "hangman", "developer", "animation", "wizard", "dr
 
 MAX_ATTEMPTS = 6
 
-# Function to choose a random word from the list
+
 def choose_word():
     return random.choice(WORDS)
 
@@ -20,11 +20,10 @@ def choose_word():
 def display_current_state(word, guessed_letters):
     return " ".join([letter if letter in guessed_letters else "_" for letter in word])
 
-# Function to check if the full word is guessed
 def is_word_guessed(word, guessed_letters):
     return all(letter in guessed_letters for letter in word)
 
-# Function to take a valid letter input from the user
+
 def get_valid_input(prompt, guessed_letters):
     while True:
         guess = input(prompt).lower()
